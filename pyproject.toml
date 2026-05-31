@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptshield-cli"
+version = "1.0.0"
+description = "Lightweight terminal AI Prompt security detection and injection defense engine"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "PromptShield Team"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "rich>=12.0.0",
+]
+
+[project.scripts]
+promptshield = "promptshield.cli:main"
+
+[tool.setuptools]
+packages = ["promptshield"]
+
+[tool.setuptools.package-data]
+promptshield = ["**/*.py"]
